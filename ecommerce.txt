@@ -1,0 +1,24 @@
+- Manage Users(page)
+  - Create User
+  - Edit/Update User
+  - Delete User (soft delete/ hard delete -> )
+  - View User(details)
+  - User list (search, filter(status-active, inactive, age, role), sort)
+
+- Manage Products(page)
+  - Create Product
+  - Edit/Update Product
+  - Delete Product (soft delete/ hard delete -> )
+  - View Product(details)
+  - Product list (search, filter(status-active, inactive, age, role), sort)
+
+- Manage Orders
+- Manage Categories
+- Manage Brands
+- Manage Attributes
+- Manage Coupons
+- Manage Reviews
+- Manage Payments
+- Manage Shipping
+- Manage Inventory
+- Manage Reports
