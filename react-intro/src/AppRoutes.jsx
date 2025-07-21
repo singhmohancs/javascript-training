@@ -6,6 +6,7 @@ import ManageUserPage from './pages/ManageUser';
 import ManageProductPage from './pages/ManageProduct';
 import ManageBrandPage from './pages/ManageBrand';
 import ManageOrderPage from './pages/ManageOrder';
+import CreateUserPage from './pages/ManageUser/components/CreateUser';
 
 const AppRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
 
           <Route  element={<PublicLayout />}> 
             <Route index element={<ManageUserPage />} />
+            <Route path="/create-user" element={<CreateUserPage />} />
             <Route path="/manage-product" element={<ManageProductPage />} />
             <Route path="/manage-brand" element={<ManageBrandPage />} />
             <Route path="/manage-order" element={<ManageOrderPage />} />
