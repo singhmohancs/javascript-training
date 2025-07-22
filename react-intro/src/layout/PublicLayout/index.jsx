@@ -24,7 +24,7 @@ export default function PublicLayout() {
         </ul>
       </nav>
 			</header>
-			<main className="appMain">
+			<main className="appMain min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
 			<Outlet />
 			</main>
 			<footer className="appFooter">

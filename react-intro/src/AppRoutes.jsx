@@ -7,6 +7,8 @@ import ManageProductPage from './pages/ManageProduct';
 import ManageBrandPage from './pages/ManageBrand';
 import ManageOrderPage from './pages/ManageOrder';
 import CreateUserPage from './pages/ManageUser/components/CreateUser';
+import AuthLayout from './layout/AuthLayout';
+import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 
 const AppRoutes = () => {
   return (
@@ -17,7 +19,19 @@ const AppRoutes = () => {
         <Routes>
            
 
+          <Route path="/auth" element={<AuthLayout />}>
+            <Route path="login" element={<LoginPage />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="forgot-password" element={<ForgotPasswordPage />} />
+            {/* <Route path="verify-user" element={<VerifyUserPage />} />
+            <Route path="reset-password" element={<ResetPasswordPage />} />
+            <Route
+              path="reset-temp-password"
+              element={<ResetTempPasswordPage />}
+            /> */}
+          </Route>
 
+          
           <Route  element={<PublicLayout />}> 
             <Route index element={<ManageUserPage />} />
             <Route path="/create-user" element={<CreateUserPage />} />

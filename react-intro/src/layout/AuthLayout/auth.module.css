@@ -1,0 +1,9 @@
+.authPage{	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #ffffff;
+	gap: 20px;
+}
