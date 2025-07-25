@@ -1,6 +1,5 @@
-import UserCard from "../../../../components/user/UserCard"
-import Button from "../../../../components/button/Button"
-import { Link, useNavigate } from "react-router"
+import { UserCard, Button } from "../../../../components"
+import { useNavigate } from "react-router"
 
 export default function UserList() {
   const navigate = useNavigate();

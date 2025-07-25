@@ -9,7 +9,7 @@ import ManageOrderPage from './pages/ManageOrder';
 import CreateUserPage from './pages/ManageUser/components/CreateUser';
 import AuthLayout from './layout/AuthLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
-
+import { ContactUsPage } from './pages/ContactUs';
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -17,8 +17,8 @@ const AppRoutes = () => {
         fallback={<div className="text-black">Loading...</div>}
       >
         <Routes>
-           
-
+          <Route path="/contact-us" element={<ContactUsPage />} />
+         
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
