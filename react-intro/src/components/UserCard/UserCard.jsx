@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import './style.css';
 
 export default function UserCard(props) {
@@ -5,6 +6,7 @@ export default function UserCard(props) {
 	
 	return (
 		<div className="card">
+		<Link to={`/users/${user.id}`}>View</Link>
 		<p>Name: {user.name}</p>
 		<p>Age: {user.age}</p>
 		<p>City: {user.city}</p>

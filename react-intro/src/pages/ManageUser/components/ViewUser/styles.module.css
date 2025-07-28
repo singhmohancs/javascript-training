@@ -1,0 +1,18 @@
+.viewUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.viewUser h1 {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}

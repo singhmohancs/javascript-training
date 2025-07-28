@@ -10,16 +10,16 @@ export default function PublicLayout() {
 			<nav className="appNav">
         <ul>
           <li>
-            <NavLink to="/">Manage Users</NavLink>
+            <NavLink to="/users">Manage Users</NavLink>
           </li>
           <li>
-            <NavLink to="/manage-product">Manage Products</NavLink>
+            <NavLink to="/products">Manage Products</NavLink>
           </li>
           <li>
-            <NavLink to="/manage-brand">Manage Brands</NavLink>
+            <NavLink to="/brands">Manage Brands</NavLink>
           </li>
           <li>
-            <NavLink to="/manage-order">Manage Orders</NavLink>
+            <NavLink to="/orders">Manage Orders</NavLink>
           </li>
         </ul>
       </nav>

@@ -5,11 +5,11 @@ export default function UserList() {
   const navigate = useNavigate();
 
 	  const users = [
-    {name: "Shivali", age: 20, city: "Delhi", country: "India", email: "shivali@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
-    {name: "Mohan", age: 20, city: "Delhi", country: "India", email: "mohan@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
-    {name: "Rajesh", age: 20, city: "Delhi", country: "India", email: "rajesh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
-    {name: "Suresh", age: 20, city: "Delhi", country: "India", email: "suresh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
-    {name: "Rajesh", age: 20, city: "Delhi", country: "India", email: "rajesh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
+    { id: 1,  name: "Shivali", age: 20, city: "Delhi", country: "India", email: "shivali@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
+    {id: 2, name: "Mohan", age: 20, city: "Delhi", country: "India", email: "mohan@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
+    {id: 3, name: "Rajesh", age: 20, city: "Delhi", country: "India", email: "rajesh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
+    {id: 4, name: "Suresh", age: 20, city: "Delhi", country: "India", email: "suresh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
+    {id: 5, name: "Rajesh", age: 20, city: "Delhi", country: "India", email: "rajesh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
   ]
   function clickHandler() {
     navigate("/create-user");

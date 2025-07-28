@@ -2,11 +2,10 @@ import { Suspense } from 'react';
 import { BrowserRouter, Navigate, Route, BrowserRouter as Router, Routes } from 'react-router';
 import PublicLayout from './layout/PublicLayout';
 import ProductLayout from './layout/ProductLayout';
-import ManageUserPage from './pages/ManageUser';
+import { ManageUserPage, ViewUserPage, UpdateUserPage, CreateUserPage } from './pages/ManageUser';
 import ManageProductPage from './pages/ManageProduct';
 import ManageBrandPage from './pages/ManageBrand';
 import ManageOrderPage from './pages/ManageOrder';
-import CreateUserPage from './pages/ManageUser/components/CreateUser';
 import AuthLayout from './layout/AuthLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 import { ContactUsPage } from './pages/ContactUs';
@@ -33,11 +32,23 @@ const AppRoutes = () => {
 
           
           <Route  element={<PublicLayout />}> 
-            <Route index element={<ManageUserPage />} />
-            <Route path="/create-user" element={<CreateUserPage />} />
-            <Route path="/manage-product" element={<ManageProductPage />} />
-            <Route path="/manage-brand" element={<ManageBrandPage />} />
-            <Route path="/manage-order" element={<ManageOrderPage />} />
+            <Route index element={<ManageProductPage />} />
+
+            {/* <Route path="/users" element={<ManageUserPage />} />
+            <Route path="/users/create" element={<CreateUserPage />} />
+            <Route path="/users/:user_id" element={<ViewUserPage />} />
+            <Route path="/users/:user_id/update" element={<UpdateUserPage />} /> */}
+
+              <Route path="/users" element={<ManageUserPage />}>
+                <Route path="create" element={<CreateUserPage />} />
+                <Route path=":user_id" element={<ViewUserPage />} />
+                <Route path=":user_id/update" element={<UpdateUserPage />} />
+              </Route>
+
+
+            <Route path="/products" element={<ManageProductPage />} />
+            <Route path="/brands" element={<ManageBrandPage />} />
+            <Route path="/orders" element={<ManageOrderPage />} />
           </Route>
 
           <Route  element={<ProductLayout />}> 
