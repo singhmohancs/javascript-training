@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import { NavLink, Outlet } from "react-router";
+import { Link, NavLink, Outlet } from "react-router";
 
 export default function PublicLayout() {
 	return (

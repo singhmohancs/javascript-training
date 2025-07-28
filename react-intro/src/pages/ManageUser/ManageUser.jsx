@@ -1,5 +1,5 @@
-import UserList from "./components/UserList/UserList";
 import { Outlet } from "react-router";
+import { UserList } from "./components";
 
 export default function ManageUserPage() {
 	return (

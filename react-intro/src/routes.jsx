@@ -1,14 +1,15 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Navigate, Route, BrowserRouter as Router, Routes } from 'react-router';
-import PublicLayout from './layout/PublicLayout';
-import ProductLayout from './layout/ProductLayout';
 import { ManageUserPage, ViewUserPage, UpdateUserPage, CreateUserPage } from './pages/ManageUser';
 import ManageProductPage from './pages/ManageProduct';
 import ManageBrandPage from './pages/ManageBrand';
 import ManageOrderPage from './pages/ManageOrder';
 import AuthLayout from './layout/AuthLayout';
+import PublicLayout from './layout/PublicLayout';
+import ProductLayout from './layout/ProductLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 import { ContactUsPage } from './pages/ContactUs';
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -36,13 +37,13 @@ const AppRoutes = () => {
 
             {/* <Route path="/users" element={<ManageUserPage />} />
             <Route path="/users/create" element={<CreateUserPage />} />
-            <Route path="/users/:user_id" element={<ViewUserPage />} />
-            <Route path="/users/:user_id/update" element={<UpdateUserPage />} /> */}
+            <Route path="/users/:userId" element={<ViewUserPage />} />
+            <Route path="/users/:userId/update" element={<UpdateUserPage />} /> */}
 
               <Route path="/users" element={<ManageUserPage />}>
                 <Route path="create" element={<CreateUserPage />} />
-                <Route path=":user_id" element={<ViewUserPage />} />
-                <Route path=":user_id/update" element={<UpdateUserPage />} />
+                <Route path=":userId" element={<ViewUserPage />} />
+                <Route path=":userId/update" element={<UpdateUserPage />} />
               </Route>
 
 
