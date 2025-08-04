@@ -12,7 +12,7 @@ export default function UserList() {
     {id: 5, name: "Rajesh", age: 20, city: "Delhi", country: "India", email: "rajesh@gmail.com", phone: "9876543210", address: "123, Main Street, New York", zip: 12345},
   ]
   function clickHandler() {
-    navigate("/create-user");
+    navigate("/users/create");
   }
   return (
     <>

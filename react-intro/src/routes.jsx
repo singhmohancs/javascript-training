@@ -18,7 +18,7 @@ const AppRoutes = () => {
       >
         <Routes>
           <Route path="/contact-us" element={<ContactUsPage />} />
-         
+
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
@@ -31,8 +31,8 @@ const AppRoutes = () => {
             /> */}
           </Route>
 
-          
-          <Route  element={<PublicLayout />}> 
+
+          <Route element={<PublicLayout />}>
             <Route index element={<ManageProductPage />} />
 
             {/* <Route path="/users" element={<ManageUserPage />} />
@@ -40,11 +40,11 @@ const AppRoutes = () => {
             <Route path="/users/:userId" element={<ViewUserPage />} />
             <Route path="/users/:userId/update" element={<UpdateUserPage />} /> */}
 
-              <Route path="/users" element={<ManageUserPage />}>
-                <Route path="create" element={<CreateUserPage />} />
-                <Route path=":userId" element={<ViewUserPage />} />
-                <Route path=":userId/update" element={<UpdateUserPage />} />
-              </Route>
+            <Route path="/users" element={<ManageUserPage />}>
+              <Route path="create" element={<CreateUserPage />} />
+              <Route path=":userId" element={<ViewUserPage />} />
+              <Route path=":userId/update" element={<UpdateUserPage />} />
+            </Route>
 
 
             <Route path="/products" element={<ManageProductPage />} />
@@ -52,7 +52,7 @@ const AppRoutes = () => {
             <Route path="/orders" element={<ManageOrderPage />} />
           </Route>
 
-          <Route  element={<ProductLayout />}> 
+          <Route element={<ProductLayout />}>
             <Route path="products" element={<ManageProductPage />} />
           </Route>
 

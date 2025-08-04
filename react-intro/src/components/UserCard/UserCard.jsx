@@ -1,9 +1,14 @@
-import { NavLink } from 'react-router';
 import './style.css';
+import UserAction from './UserAction';
 
 export default function UserCard(props) {
 	const user = props.user;
 	//const navigate = useNavigate(); // hook to navigate to a different page
+
+	const handleDelete = (userId) => {
+		console.log('delete', userId);
+		console.log(user);
+	}
 
 	return (
 		<div className="card flex flex-row justify-between">
@@ -19,10 +24,7 @@ export default function UserCard(props) {
 		<p>Zip: {user.zip}</p>
 
 		</div>
-		<div className="flex flex-row gap-2">	
-		<NavLink to={`/users/${user.id}`}>View</NavLink>
-		<NavLink to={`/users/${user.id}/update`}>Edit</NavLink>
-		</div>
+		<UserAction user={user} onDelete={handleDelete} />
 		</div>
 	);
 }
