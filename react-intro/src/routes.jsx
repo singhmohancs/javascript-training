@@ -9,6 +9,7 @@ import PublicLayout from './layout/PublicLayout';
 import ProductLayout from './layout/ProductLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 import { ContactUsPage } from './pages/ContactUs';
+import CounterPage from './pages/Counter';
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
       >
         <Routes>
           <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/counter" element={<CounterPage />} />
 
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="login" element={<LoginPage />} />

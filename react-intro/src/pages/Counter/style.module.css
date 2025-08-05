@@ -1,0 +1,24 @@
+.counterPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	height: 100vh;
+	width: 100vw;
+	background-color: #f0f0f0;
+}
+
+.counterContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+}
+
+.counterButton {
+	background-color: #000;
+	color: #fff;
+}	
