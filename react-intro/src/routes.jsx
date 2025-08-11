@@ -10,6 +10,7 @@ import ProductLayout from './layout/ProductLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 import { ContactUsPage } from './pages/ContactUs';
 import CounterPage from './pages/Counter';
+import UseEffectPage from './pages/UseEffect';
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/contact-us" element={<ContactUsPage />} />
           <Route path="/counter" element={<CounterPage />} />
+         
 
           <Route path="/auth" element={<AuthLayout />}>
             <Route path="login" element={<LoginPage />} />
@@ -36,6 +38,7 @@ const AppRoutes = () => {
 
           <Route element={<PublicLayout />}>
             <Route index element={<ManageProductPage />} />
+            <Route path="/use-effect" element={<UseEffectPage />} />
 
             {/* <Route path="/users" element={<ManageUserPage />} />
             <Route path="/users/create" element={<CreateUserPage />} />
