@@ -1,0 +1,9 @@
+.todoPage {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.todoPage h1 {
+	text-align: center;
+}
