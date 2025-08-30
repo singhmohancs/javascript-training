@@ -1,8 +1,22 @@
 import { useState } from "react";
 import { validateEmail } from "../../../utils";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
+import { useAuth } from "../../../hooks";
+
+const TEST_USER = {
+  email: "mohan@gmail.com",
+  password: "123456"
+};
+
+const TEST_USER_DATA= {
+  name: "Mohan",
+  address: "Delhi",
+  id: 123,
+}
 
 export default function LoginPage() {
+  const { signIn } =  useAuth()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -45,12 +59,16 @@ export default function LoginPage() {
     if (!validateForm()) return;
     setIsSubmitting(true);
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitSuccess(true);
-      setTimeout(() => {
-        setSubmitSuccess(false);
+      // await new Promise(resolve => setTimeout(resolve, 1500));
+
+      if(formData.email === TEST_USER.email && formData.password === TEST_USER.password){
+        signIn(TEST_USER_DATA);
+        setSubmitSuccess(true);
         resetForm();
-      }, 3000);
+        navigate("/");
+      }else{
+        setErrors({ submit: 'Invalid email or password' });
+      }
     } catch (err) {
       console.log(err);
       setErrors({ submit: 'Failed to create user. Please try again.' });

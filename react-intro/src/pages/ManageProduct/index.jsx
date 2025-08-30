@@ -1,3 +1,6 @@
+import { useAuth } from "../../hooks";
+
 export default function ManageProductPage() {
-	return <div>ManageProductPage</div>;
+	const { user } = useAuth();
+	return <div>ManageProductPage {user?.name} - {user?.id}</div>;
 }

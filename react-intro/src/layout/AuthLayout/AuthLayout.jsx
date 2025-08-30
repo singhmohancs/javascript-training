@@ -1,8 +1,12 @@
-import { Outlet } from "react-router";
+import { Navigate, Outlet } from "react-router";
 import eiffelTower from "../../assets/eiffel-tower.jpg";
 import authStyles from "./auth.module.css";
+import { useAuth } from "../../hooks";
 
 export default function AuthLayout() {
+	const { isAuthenticated } = useAuth();
+	if (isAuthenticated) return <Navigate to="/" />;
+
 	return (
 		<>
 		<div className={`${authStyles['authPage']}`}>
