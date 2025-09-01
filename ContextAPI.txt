@@ -1,0 +1,84 @@
+ContextAPI
+- It is built in way in the React.
+- It centralizes the state management.
+- It is used to share the data between the components.
+
+import { createContext } from "react";
+
+const DemoContext = createContext();
+
+export default function DemoProvider({children}) {
+  const [name, setName] = useState('mohan');
+
+	const updateName = (updatedName) =>{
+		setName(updatedName)
+	}
+
+	const value = {
+		name,
+		setName,
+		updateName
+	}
+	return <DemoContext.Provider value="value">{children}</DemoContext.Provider>
+}
+
+
+import { useContext } from "react";
+import { DemoContext } from "../context/DemoContext";
+export const useDemo = () => {
+	const context = useContext(DemoContext);
+	if (!context) {
+		console.error('useDemo must be used within an DemoProvider');
+	}
+	return context;
+}
+
+
+
+export default function Demo(){
+const {name} =  useDemo();
+
+ return (
+    <h1>This is my Name{name}</h1>
+ )
+}
+
+export default function Demo2(){
+const {name} =  useDemo();
+
+ return (
+    <h1>This is my Name{name}</h1>
+ )
+}
+
+
+export default function Demo3(){
+const {name} =  useDemo();
+
+ return (
+    <h1>This is my Name{name}</h1>
+ )
+}
+
+
+1. Create a context - > const DemoContext = createContext();
+2. Create Provider -> that returns Provider Component -> Provider Component is used to register/store the method and properties/variable
+3. Use/set Config of Provide Component/ Register Provider Component
+4. How to consume the variable and methods of provider component
+  const context =  useContext(DemoContext);
+	Or create a custom hook to consume the method and propeties of Context
+	const {name} =  useDemo();
+
+
+<DemoProvider>
+<Demo  />
+<Demo2 />
+<Demo3 />
+</DemoProvider>
+
+
+Practical -
+
+- Display products 
+- Product Card should a button "Add to Card"
+- Show the Count of products in the cart in the header
