@@ -5,7 +5,17 @@ ContextAPI
 
 import { createContext } from "react";
 
+Step 1:
+-----------------------------------
 const DemoContext = createContext();
+
+Step 2:
+--------------------------------------------------
+- Create the Provider
+- Provider is used to create the Provider Component
+- Provider Component is created by using Context.Provider
+- Provider component stores/registers varaible/method to be used by components 
+- It register/store the variable/methods by providing the prop value
 
 export default function DemoProvider({children}) {
   const [name, setName] = useState('mohan');
@@ -23,6 +33,11 @@ export default function DemoProvider({children}) {
 }
 
 
+Step 3:
+--------------------------------
+- Consume the varaible/method of provider component by using useContext hook
+- It is recommended to use custom hook that handle the error and returns the context
+
 import { useContext } from "react";
 import { DemoContext } from "../context/DemoContext";
 export const useDemo = () => {
@@ -32,6 +47,51 @@ export const useDemo = () => {
 	}
 	return context;
 }
+
+Step 4:
+--------------------------------
+Regiter the provider component
+- Go to App.jsx
+- Add the Provider component at top level that you wants to cover
+<AuthProvider> -> useAuth()
+	<CartProvider> -> useCart()
+		<Routes />
+	</CartProvider>
+</AuthProvider>
+
+
+// Destructuring
+
+// Object
+let user = { name: 'techur', address: 'dehradun'}
+user.address
+user.name
+const {address, name} =  user; // single line
+
+// Array
+let dimension = [54634.324234,12.325235];
+console.log(dimension[0])
+console.log(dimension[1])
+const [long, lat] = dimension;
+
+// Array Elements concat/merge
+const users = [{name: mohan}, {name: vipul},{name:syed}];
+
+users.push() // adds element at the end
+users.unshift() // adds element at first index
+
+
+// Merge array
+const newlyAddedUsers = [{name: mohan}, {name: vipul},{name:syed}];
+const totalUsers = [...users, ...newlyAddedUsers]
+
+// Merge Object
+const user = {name: 'mohan'};
+const userDetails = {address:'dehradun'};
+
+const updatedUser = {...user, ...userDetails}
+
+
 
 
 
@@ -75,7 +135,6 @@ const {name} =  useDemo();
 <Demo2 />
 <Demo3 />
 </DemoProvider>
-
 
 Practical -
 

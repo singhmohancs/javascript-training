@@ -33,7 +33,7 @@ export default function ProtectedLayout() {
           </li>
         </ul>
 				<div className="flex flex-row items-center gap-2">	
-				<div className="text-primary-500 text-sm border border-gray-300 rounded-full p-2 w-8 h-8 flex items-center justify-center" onClick={clickCartIconHandler}>
+				<div className="text-primary-500 cursor-pointer text-sm border border-gray-300 rounded-full p-2 w-8 h-8 flex items-center justify-center" onClick={clickCartIconHandler}>
 					{cart?.length}
 				</div>
 				<button onClick={() => signOut()} className="bg-red-500 text-white px-4 py-2 rounded-md">Sign Out</button>

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -20,6 +20,7 @@ export default function CartProvider({children}) {
 		cart,
 		addToCart,
 	}
+
 
 	// Provider Component - It is used to store/register the methods and properties/variables to the context
 	return <CartContext.Provider value={value}>{children}</CartContext.Provider>
