@@ -1,16 +1,15 @@
 import { Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 import { ManageUserPage, ViewUserPage, UpdateUserPage, CreateUserPage } from './pages/ManageUser';
-import ManageBrandPage from './pages/ManageBrand';
 import ManageOrderPage from './pages/ManageOrder';
 import AuthLayout from './layout/AuthLayout';
-import ProductLayout from './layout/ProductLayout';
 import { LoginPage, RegisterPage, ForgotPasswordPage } from './pages/Auth';
 import { ContactUsPage } from './pages/ContactUs';
 import CounterPage from './pages/Counter';
 import UseEffectPage from './pages/UseEffect';
 import ProtectedLayout from './layout/ProtectedLayout';
 import { ProductDetailPage, ProductListPage } from './pages/ManageProduct';
+import { UseCallbackPage, UseMemoPage } from './pages/ManageBrand';
 
 const AppRoutes = () => {
   return (
@@ -39,7 +38,8 @@ const AppRoutes = () => {
 
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/products/:productId" element={<ProductDetailPage />} />
-          <Route path="/brands" element={<ManageBrandPage />} />
+          <Route path="/use-callback" element={<UseCallbackPage />} />
+          <Route path="/use-memo" element={<UseMemoPage />} />
           <Route path="/orders" element={<ManageOrderPage />} />
         </Route>
 
