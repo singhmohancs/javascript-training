@@ -19,3 +19,5 @@
     const zipRegex = /^[0-9]{5,6}$/;
     return zipRegex.test(zip);
   };
+
+  export default function validateForm(){}

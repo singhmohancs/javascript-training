@@ -13,8 +13,9 @@ export default function UseMemoPage() {
 		return num * 2;
 	}
 
-	const doubleCount = useMemo(() => getDoubleOfNumber(count), [count]);
+	 const doubleCount = useMemo(() => getDoubleOfNumber(count), [count]);
 	//const doubleCount = getDoubleOfNumber(count);
+
 
 	const themeStyle = {
 		backgroundColor: dark ? 'black' : 'white',

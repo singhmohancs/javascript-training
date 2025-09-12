@@ -29,7 +29,6 @@ const AppRoutes = () => {
         <Route element={<ProtectedLayout />}>
           <Route index element={<ProductListPage />} />
           <Route path="/use-effect" element={<UseEffectPage />} />
-
           <Route path="/users" element={<ManageUserPage />}>
             <Route path="create" element={<CreateUserPage />} />
             <Route path=":userId" element={<ViewUserPage />} />

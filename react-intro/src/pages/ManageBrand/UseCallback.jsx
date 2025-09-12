@@ -11,8 +11,9 @@ export default function UseCallbackPage() {
 
 	// Same function reference untill setQtn is changed
 	const handleAdd = useCallback(() => {
+		console.log('handleAdd');
 		setQtn(qtn + 1);
-	}, [qtn]);
+	}, [qtn]);	
 
 
 	return <div className="flex flex-col gap-2 items-center justify-center bg-amber-400 p-4 rounded-md w-[500px] mx-auto">
